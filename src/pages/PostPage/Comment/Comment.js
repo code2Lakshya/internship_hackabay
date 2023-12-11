@@ -24,7 +24,7 @@ const Comment = ({ data }) => {
                     {data?.text}
                 </h3>
             }
-            <p> By <span>{data?.author}</span></p>
+            <p> By : <span>{data?.author}</span></p>
         </div>
     );
 }

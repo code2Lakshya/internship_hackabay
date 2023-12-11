@@ -34,9 +34,9 @@ const PostPage = () => {
             <h1>Post :</h1>
                 <div className="post">
                     <h3>
-                        {title} by :
-                        <span> {author}</span>
+                        {title} 
                     </h3>
+                    <p> Author: <span>{author}</span></p>
                     <div id='post-description'>
                         <p>Type: <span>{type}</span></p>
                         <p>Points: <span>{points}</span></p>
