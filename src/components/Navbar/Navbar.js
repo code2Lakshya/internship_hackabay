@@ -18,7 +18,7 @@ const Navbar = () => {
                     <li><HashLink to='/#about' smooth>About</HashLink></li>
                     <li><HashLink to='/#contact' smooth>Contact Us</HashLink></li>
                 </ul>
-                <p onClick={()=>setShowSearch(!showSearch)}><FiSearch /></p>
+                <p onClick={()=>setShowSearch(!showSearch)} data-testid='searchBtn'><FiSearch /></p>
             </nav>
             {
                 showSearch && <SearchBar setShowSearch={setShowSearch} />

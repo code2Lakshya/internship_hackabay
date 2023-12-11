@@ -4,6 +4,10 @@
     z-index: 0;
     position: relative;
     background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-page::after {
@@ -14,9 +18,30 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+    z-index: 2;
 }
 
-.home-page img {
+.home-page .lazy-load-image-background {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.lazy-load-image-background img{
+    width: 100%;
+    height: 100%;
+}
+.home-page h1{
+    position: relative;
+    z-index: 3;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+    .home-page h1{
+        font-size: 40px;
+    }
 }

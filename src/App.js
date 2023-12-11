@@ -1,6 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import HomePage from "./pages/HomePage/HomePage";
+import { Suspense, lazy } from "react";
+import Loader from "./components/Loader/Loader";
+
+const PostPage=lazy(()=>import('./pages/PostPage/PostPage'));
 
 function App() {
 
@@ -9,7 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/post/:postId' element={<p>Post Page</p>} />
+        <Route path='/post/:postId' element={<Suspense fallback={<Loader />}><PostPage /></Suspense>} />
       </Routes>
     </div>
   );
